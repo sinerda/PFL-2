@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #f7f8f3;
+}
+
 .header {
   height: 100vh;
   background-position: center;
@@ -225,4 +229,103 @@
   font-size: 26px;
   color: #fff;
   text-transform: uppercase;
+}
+
+.quality {
+}
+.quality__inner {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.quality__holder {
+  width: 690px;
+  height: 200px; 
+  background-image: url(../images/quality-holder.png);
+}
+.quality__title {
+  color: #1c1c1b;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 45px;
+}
+.quality__logos {
+  margin-top: 25px;
+}
+.about {
+}
+.about__inner {
+  margin: auto auto 145px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 1170px;
+}
+.about__tab {
+  margin-bottom: 80px;
+  width: 970px;
+  border-bottom: 2px solid #ced6af;
+  margin-left: 100px;
+}
+.about__tab-links {
+  color: #1c1c1b;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  margin-right: 115px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: -2px;
+  height: 60px;
+}
+.about__tab-links--active {
+  border-bottom: 2px solid #1c1c1b;
+}
+.about__tab-content-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.about__content-text {
+  width: 410px;
+}
+.content-text {
+  margin-left: 100px;
+}
+.content-text__title {
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  line-height: 40px;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+.content-text__text {
+  color: #6e774a;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  line-height: 40px;
+}
+.about__content-images {
+  margin-left: 190px;
+}
+.content-images {
+  width: 570px;
+}
+.content-images__img {
+  width: 570px;
+  height: 300px;
+  margin-bottom: 30px;
+	object-fit: cover;
 }
