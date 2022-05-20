@@ -18,3 +18,16 @@
 //   document.getElementById(IdName).style.display = "block";
 //   evt.currentTarget.className += " active";
 // }
+$(function () {
+  $('.products-slider').slick({
+    variableWidth: true,
+    speed: 2600,
+    autoplay: true,
+  });
+})
+
+
+$(function () {
+  $(".slick-next").html("");
+  $(".slick-prev").html("");
+})
