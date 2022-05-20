@@ -21,8 +21,8 @@
 $(function () {
   $('.products-slider').slick({
     variableWidth: true,
-    speed: 2600,
-    autoplay: true,
+    speed: 1800,
+    // autoplay: true,
   });
 })
 
