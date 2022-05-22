@@ -6,6 +6,10 @@ html {
   background-color: #f7f8f3;
 }
 
+::selection {
+  background-color: #aab384;
+}
+
 .header {
   height: 100vh;
   background-position: center;
@@ -296,8 +300,15 @@ html {
 }
 
 .about__tab-content-inner {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
+  display: none;
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .about__content-text {
