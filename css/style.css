@@ -496,7 +496,7 @@ html {
   height: 816px;
 }
 
-.reviews-arrows { 
+.reviews-arrows {
   border: 1px solid #fff;
   bottom: 0;
   width: 130px;
@@ -508,6 +508,7 @@ html {
   transform: translateX(100%);
   background-image: url(../images/reviews-arr-right.png);
 }
+
 .reviews-prev {
   transform: translateX(0%);
   border-right: none;
@@ -602,5 +603,129 @@ html {
   font-size: 24px;
   letter-spacing: 0.28em;
   color: #fff;
+  text-transform: uppercase;
+}
+
+.footer {}
+
+.container {}
+
+.footer__inner {
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 440px;
+}
+
+.footer__list-of-links {
+  padding-top: 90px;
+  border-top: 2px solid #6e774a;
+  min-width: 370px;
+}
+
+.footer__links-item {}
+
+.footer__links {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.28em;
+  color: #6e774a;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__subscribe {}
+
+.footer__text-logo {
+  font-size: 60px;
+  color: #6e774a;
+  transform: translateY(-50%);
+}
+
+.footer__list-of-social-links {
+  display: inline-flex;
+  width: 190px;
+  justify-content: space-between;
+  margin: 30px 0 40px;
+  position: relative;
+  left: 5px;
+}
+
+.footer__social-links-item {}
+
+.footer__social-link {
+  font-size: 22px;
+  color: #6e774a;
+}
+
+.footer__icon-social-link {}
+
+.footer__verticale-line {
+  display: block;
+  width: 2px;
+  height: 55px;
+  background-color: #6e774a;
+  margin-bottom: 27px;
+  left: 50%;
+  position: relative;
+}
+
+.footer__sub-to-news {
+  color: #1c1c1b;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.footer__form {
+  width: 370px;
+  height: 60px;
+  border: 2px solid #ced6af;
+  display: flex;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.footer__form-input {
+  width: 275px;
+  height: 55px;
+  background-color: #f7f8f3;
+  color: #6e774a;
+  border: none;
+  padding: 0 30px;
+  outline: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 75px;
+  letter-spacing: 0.28em;
+}
+
+.footer__form-btn {
+  width: 88px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-left: 2px solid #ced6af;
+  cursor: pointer;
+  background-image: url(../images/footer-right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer__copyright {
+  color: #6e774a;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 40px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
 }
