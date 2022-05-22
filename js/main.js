@@ -24,6 +24,13 @@ $(function () {
     speed: 1800,
     // autoplay: true,
   });
+  $('.reviews-slider').slick({
+    speed: 4500,
+    autoplay: true,
+    // infinite: false,
+    nextArrow: '<button class="slick-arrow reviews-next reviews-arrows"></button>',
+    prevArrow: '<button class="slick-arrow reviews-prev reviews-arrows"></button>',
+  });
 })
 
 
