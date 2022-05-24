@@ -4,6 +4,7 @@
 
 html {
   background-color: #f7f8f3;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -55,6 +56,7 @@ html {
 
 .menu__list {
   padding-left: 27px;
+  cursor: default;
 }
 
 .menu__item {
@@ -73,6 +75,34 @@ html {
   text-transform: uppercase;
   margin: 0 23px;
   padding-top: 35px;
+  position: relative;
+}
+
+.menu__link:hover .menu__link-hover {
+  animation: ani .5s forwards;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateX(-30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(14%);
+  }
+}
+
+.menu__link-hover {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 145%;
+  background-color: #9db892;
+  bottom: 36px;
+  right: 0px;
+  opacity: 0;
+  transition: opacity ease-in .5s;
 }
 
 .menu__text-logo {
@@ -86,7 +116,9 @@ html {
   font-weight: 400;
 }
 
-.menu__button-list {}
+.menu__button-list {
+  cursor: default;
+}
 
 .menu__button-item {
   height: 80px;
@@ -122,6 +154,10 @@ html {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.menu__btn .menu__link-hover {
+  animation: ani .5s forwards;
 }
 
 .header__intro {
@@ -218,12 +254,54 @@ html {
   right: 3px;
 }
 
-.header__intro-arrow {}
+.header__intro-arrow-inner {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px;
+}
+
+.header__intro-arrow {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.header__intro-arrow::before {
+  content: '';
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/intro-arrow-down.png);
+  background-repeat: no-repeat;
+  animation: intro-arrow 1.7s infinite;
+}
+
+@keyframes intro-arrow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
 
 .header__intro-border {
   writing-mode: tb-rl;
   transform: rotate(-180deg);
-  bottom: 40px;
+  bottom: 130px;
   left: 40px;
   position: absolute;
   font-family: 'Oswald', sans-serif;
@@ -231,6 +309,16 @@ html {
   font-size: 26px;
   color: #fff;
   text-transform: uppercase;
+}
+
+.header__intro-border::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-image: url(../images/intro-line-verticale.png);
+  top: -130px;
+  left: 10px;
 }
 
 .quality {}
@@ -266,7 +354,7 @@ html {
 .about {}
 
 .about__inner {
-  margin: auto auto 145px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -300,15 +388,8 @@ html {
 }
 
 .about__tab-content-inner {
-  /* display: flex; */
   justify-content: space-between;
   display: none;
-  animation: fadeEffect 1.5s;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 
 .about__content-text {
@@ -359,7 +440,7 @@ html {
 }
 
 .products__inner {
-  margin-bottom: 220px;
+  margin: 145px 0 220px;
 }
 
 .products__title {
@@ -392,24 +473,37 @@ html {
 }
 
 .slick-arrow {
-  width: 60px;
-  height: 40px;
   position: absolute;
-  bottom: -20%;
   z-index: 5;
-  border: none;
   background: transparent;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.slick-prev {
+.products-arrow {
+  border: none;
+  bottom: -20%;
+  width: 60px;
+  height: 40px;
+  transition: 0.7s ease;
+}
+
+.products-arrow:hover {
+  background-color: #ced6af;
+  transition: all 0.4s;
+}
+
+.products-arrow:active {
+  background-color: #e1e1e1;
+}
+
+.products-prev {
   left: 47.5%;
   background-image: url(../images/product_left.png);
 }
 
-.slick-next {
+.products-next {
   left: 52.5%;
   background-image: url(../images/product_right.png);
 }
@@ -485,6 +579,16 @@ html {
   text-transform: uppercase;
   padding-right: 70px;
   cursor: pointer;
+  transition: 0.7s ease;
+}
+
+.ps-item__buy:hover {
+  background-color: #8a974f;
+  transition: all 0.4s;
+}
+
+.ps-item__buy:active {
+  background-color: #a9bc5e;
 }
 
 .ps-item__buy::after {
@@ -507,12 +611,22 @@ html {
   height: 816px;
 }
 
-.reviews-arrows {
+.reviews-arrow {
   border: 1px solid #fff;
   bottom: 0;
   width: 130px;
   height: 95px;
   right: 50%;
+  transition: 0.7s ease;
+}
+
+.reviews-arrow:hover {
+  background-color: #aab384;
+  transition: all 0.4s;
+}
+
+.reviews-arrow:active {
+  background-color: #f7f8f3;
 }
 
 .reviews-next {

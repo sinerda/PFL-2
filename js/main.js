@@ -31,13 +31,15 @@ $(function () {
     variableWidth: true,
     speed: 1800,
     // autoplay: true,
+    nextArrow: '<button class="slick-arrow products-arrow products-next"></button>',
+    prevArrow: '<button class="slick-arrow products-arrow products-prev"></button>',
   });
   $('.reviews-slider').slick({
     speed: 4500,
     // autoplay: true,
     // infinite: false,
-    nextArrow: '<button class="slick-arrow reviews-next reviews-arrows"></button>',
-    prevArrow: '<button class="slick-arrow reviews-prev reviews-arrows"></button>',
+    nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',
+    prevArrow: '<button class="slick-arrow reviews-arrow reviews-prev"></button>',
   });
 })
 
