@@ -1,21 +1,21 @@
-document.getElementById("default").click();
+// document.getElementById("default").click();
 
-function openTab(evt, IdName) {
-  let i, tabcontent, tablinks;
+// function openTab(evt, IdName) {
+//   let i, tabcontent, tablinks;
 
-  tabcontent = document.getElementsByClassName("about__tab-content-inner");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+//   tabcontent = document.getElementsByClassName("about__tab-content-inner");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
 
-  tablinks = document.getElementsByClassName("about__tab-links");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("about__tab-links--active", "");
-  }
+//   tablinks = document.getElementsByClassName("about__tab-links");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace("about__tab-links--active", "");
+//   }
 
-  document.getElementById(IdName).style.display = "flex";
-  evt.currentTarget.className += " about__tab-links--active";
-}
+//   document.getElementById(IdName).style.display = "flex";
+//   evt.currentTarget.className += " about__tab-links--active";
+// }
 
 
 $(function () {
