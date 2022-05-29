@@ -163,6 +163,71 @@ html {
   animation: ani .5s forwards;
 }
 
+.mobile-menu {
+  display: none;
+  height: 70px;
+  border-bottom: 1px solid #c7cdd6;
+  justify-content: center;
+}
+
+.mobile-menu__logo {
+  height: 70px;
+  font-size: 30px;
+  padding-top: 25px;
+}
+
+.mobile-menu__button-burger {
+  top: 12px;
+  right: 20px;
+  position: fixed;
+}
+
+.button-burger {
+  width: 45px;
+  height: 45px;
+  background-color: #ced6af;
+  z-index: 50;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.button-burger__lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.button-burger__lines:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.button-burger__lines:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* menu open */
+.button-burger.active .button-burger__lines:nth-of-type(1) {
+  opacity: 10%;
+  transform: translate(-200%);
+}
+
+.button-burger.active .button-burger__lines:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.button-burger.active .button-burger__lines:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
 .header__intro {
   text-align: right;
   display: flex;
@@ -1164,12 +1229,96 @@ html {
   }
 
   .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    /* background-color: rgba(110, 119, 74, 0.901); */
+    background-color: #abb970;
+    height: 100vh;
+    width: 100vw;
+    z-index: 70;
+    position: fixed;
+    transform: translateY(-100%);
+    border: none;
+    transition: all 0.5s ease-in;
   }
 
-  .menu__button-list,
+  .menu.active {
+    transform: translateY(0%);
+    transition: all 0.4s ease;
+  }
+
+  .menu__list,
+  .menu__button-list {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
   .menu__list {
-    display: none;
+    margin-top: 110px;
+  }
+
+  .menu__button-list {
+    margin-top: 5px;
+  }
+
+  .menu__list,
+  .menu__btn {
+    padding: 0;
+  }
+
+  .menu__link,
+  .menu__btn {
+    font-size: 25px;
+    letter-spacing: 0.22em;
+  }
+
+  .menu__button-item {
+    border: none;
+  }
+
+  .menu__button-item:nth-child(2) {
+    padding-left: 0;
+  }
+
+  .menu__button-item:nth-child(2)::before {
+    position: relative;
+  }
+
+  .menu__text-logo {
+    font-size: 130px;
+    position: absolute;
+    top: 0px;
+    text-shadow: 1px 1px 20px #0000008a;
+    height: 210px;
+    display: block;
+    width: 100%;
+    /* background-color: #a9bc5e; */
+    text-align: center;
+    padding-top: 7px;
+    border-bottom: 2px solid #c7cdd6;
+  }
+
+  .menu__text-logo::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    background-image: linear-gradient(to bottom,
+        rgb(76 96 31 / 70%) 0%,
+        rgb(0 0 0 / 0%) 90%);
+  }
+
+  .mobile-menu__logo {
+    padding-top: 20px;
+  }
+
+  .mobile-menu {
+    display: flex;
   }
 
   .header__title {
@@ -1249,7 +1398,6 @@ html {
     height: 610px;
     bottom: 220px;
     z-index: inherit;
-    /* background-color: gray; */
   }
 
   .footer__list-of-links {
@@ -1262,13 +1410,11 @@ html {
 
   .footer__list-of-links:nth-of-type(1) {
     top: 70px;
-    /* background-color: lightseagreen; */
   }
 
   .footer__list-of-links:nth-of-type(2) {
     left: 390px;
     bottom: 378px;
-    /* background-color: slateblue; */
   }
 
   .footer__text-logo {
@@ -1493,13 +1639,17 @@ html {
     max-width: 360px;
   }
 
-  .menu {
+  .mobile-menu {
     height: 65px;
   }
 
-  .menu__text-logo {
+  .mobile-menu__logo {
     font-size: 25px;
     height: 65px;
+  }
+
+  .mobile-menu__button-burger {
+    top: 9px;
   }
 
   .header__title {
@@ -1613,14 +1763,18 @@ html {
     padding: 0 30px;
   }
 
-  .menu {
+  .mobile-menu {
     height: 55px;
   }
 
-  .menu__text-logo {
+  .mobile-menu__logo {
     height: 55px;
     padding-top: 15px;
     font-size: 23px;
+  }
+
+  .mobile-menu__button-burger {
+    top: 5px;
   }
 
   .header__title {
@@ -1795,7 +1949,7 @@ html {
     padding: 0 20px;
   }
 
-  .menu__text-logo {
+  .mobile-menu__logo {
     font-size: 22px;
   }
 

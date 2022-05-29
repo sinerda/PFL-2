@@ -17,6 +17,28 @@
 //   evt.currentTarget.className += " about__tab-links--active";
 // }
 
+let ButtonMenu = document.querySelector('.button-burger');
+let Menu = document.querySelector('.menu');
+ButtonMenu.addEventListener('click', function () {
+  Menu.classList.toggle('active');
+  ButtonMenu.classList.toggle('active');
+})
+
+let Mlink = document.querySelectorAll('.menu__link');
+for (let elem of Mlink) {
+  elem.addEventListener('click', function () {
+    Menu.classList.toggle('active');
+    ButtonMenu.classList.toggle('active');
+  })
+}
+let Mbtn = document.querySelectorAll('.menu__btn');
+for (let elem of Mbtn) {
+  elem.addEventListener('click', function () {
+    Menu.classList.toggle('active');
+    ButtonMenu.classList.toggle('active');
+  })
+}
+
 
 $(function () {
   $('.products-slider').slick({
