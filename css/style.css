@@ -785,7 +785,6 @@ html {
 .reviews {}
 
 .reviews__slider-inner {
-  margin-bottom: 170px;
   height: 816px;
 }
 
@@ -919,6 +918,7 @@ html {
   display: flex;
   justify-content: space-between;
   min-height: 440px;
+  margin-top: 170px;
 }
 
 .footer__list-of-links {
@@ -1112,6 +1112,39 @@ html {
     top: 15px;
   }
 
+  .reviews__slider-inner {
+    height: 700px;
+  }
+
+  .reviews-arrow {
+    width: 100px;
+    height: 65px;
+  }
+
+  .reviews-slider__item {
+    min-height: 700px;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .single-review {
+    padding-top: 200px;
+    justify-content: unset;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 21px;
+  }
+
+  .single-review__author::before {
+    top: 10px;
+  }
+
+  .reviews__text-border {
+    font-size: 19px;
+  }
+
   .footer__list-of-links {
     min-width: 320px;
   }
@@ -1182,6 +1215,30 @@ html {
 
   .accordion__text {
     line-height: 37px;
+  }
+
+  .reviews__slider-inner {
+    height: 600px;
+  }
+
+  .reviews-slider__item {
+    min-height: 600px;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .single-review {
+    padding-top: 180px;
+    max-width: 660px;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 19px;
+  }
+
+  .reviews__text-border {
+    font-size: 17px;
   }
 
   .footer__list-of-links {
@@ -1403,6 +1460,42 @@ html {
     line-height: 35px;
   }
 
+  .reviews__slider-inner {
+    height: 550px;
+  }
+
+  .reviews-slider__item {
+    min-height: 550px;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .single-review {
+    padding-top: 160px;
+    max-width: 610px;
+  }
+
+  .single-review__list-rating {
+    margin-bottom: 25px;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+
+  .single-review__author::before {
+    top: 16px;
+  }
+
+  .reviews__text-border {
+    font-size: 15px;
+    bottom: 35px;
+    left: 41px;
+  }
+
   .footer__inner {
     display: block;
   }
@@ -1481,6 +1574,46 @@ html {
   .accordion__text {
     line-height: 30px;
     font-size: 17px;
+  }
+
+  .reviews__slider-inner {
+    height: 500px;
+  }
+
+  .reviews-arrow {
+    width: 80px;
+    height: 50px;
+  }
+
+  .reviews-slider__item {
+    min-height: 500px;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .single-review {
+    max-width: 580px;
+  }
+
+  .single-review__list-rating {
+    margin-bottom: 20px;
+  }
+
+  .single-review__star {
+    font-size: 18px;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 16.5px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+
+  .reviews__text-border {
+    font-size: 13px;
+    bottom: 30px;
+    left: 30px;
   }
 
   .footer__list-of-links:nth-of-type(2) {
@@ -1562,6 +1695,22 @@ html {
     padding-left: 40px;
   }
 
+  .single-review {
+    max-width: 530px;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 15.5px;
+    line-height: 26px;
+  }
+
+  .single-review__author::before {
+    top: 12px;
+    width: 40px;
+    left: -30px;
+  }
+
   .footer__list-of-links {
     min-width: 200px;
   }
@@ -1632,6 +1781,11 @@ html {
     line-height: 26px;
     font-size: 15.5px;
     padding-left: 35px;
+  }
+
+  .single-review {
+    max-width: 410px;
+    padding-top: 140px;
   }
 
   .footer__list-of-links {
@@ -1747,6 +1901,31 @@ html {
     line-height: 25px;
     font-size: 14.5px;
     padding-left: 30px;
+  }
+
+  .reviews__slider-inner {
+    height: 400px;
+  }
+
+  .reviews-slider__item {
+    min-height: 400px;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .single-review {
+    max-width: 310px;
+    padding-top: 80px;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 14.5px;
+    line-height: 22px;
+  }
+
+  .reviews__text-border {
+    font-size: 12px;
   }
 
   .footer__list-of-links {
@@ -1896,6 +2075,15 @@ html {
     padding-left: 24px;
   }
 
+  .single-review {
+    padding-top: 110px;
+  }
+
+  .reviews__text-border {
+    bottom: 20px;
+    left: 15px;
+  }
+
   .footer__subscribe {
     height: 750px;
   }
@@ -1984,6 +2172,18 @@ html {
 
   .accordion__btn::after {
     margin-left: -7px;
+  }
+
+  .reviews-slider__item {
+    background-position-x: -90px;
+    /* Это свойство почему-то не хочет работать из-за слайдера. 
+    Он не учитывает этот стиль.
+    сцуко :'(                */
+  }
+
+  .single-review {
+    max-width: 220px;
+    padding-top: 70px;
   }
 
   .footer__subscribe {

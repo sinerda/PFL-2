@@ -54,6 +54,14 @@ $(function () {
     // infinite: false,
     nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',
     prevArrow: '<button class="slick-arrow reviews-arrow reviews-prev"></button>',
+    responsive: [
+      {
+        breakpoint: 426,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
 })
 
