@@ -191,6 +191,7 @@ html {
   overflow: hidden;
   z-index: 100;
   box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in;
 }
 
 .button-burger__lines {
@@ -199,7 +200,7 @@ html {
   left: 50%;
   width: 30px;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   transform: translate(-50%, -50%);
   transition: all 0.5s;
 }
@@ -214,8 +215,8 @@ html {
 
 /* menu open */
 .button-burger.active .button-burger__lines:nth-of-type(1) {
-  opacity: 10%;
-  transform: translate(-200%);
+  opacity: 0%;
+  transition: all .1s ease-in;
 }
 
 .button-burger.active .button-burger__lines:nth-of-type(2) {
@@ -1233,8 +1234,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: rgba(110, 119, 74, 0.901); */
-    background-color: #abb970;
+    background-color: rgb(241 246 220 / 98%);
     height: 100vh;
     width: 100vw;
     z-index: 70;
@@ -1253,7 +1253,7 @@ html {
   .menu__button-list {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
   }
 
   .menu__list {
@@ -1261,7 +1261,7 @@ html {
   }
 
   .menu__button-list {
-    margin-top: 5px;
+    border-bottom: 2px solid #dae0c4;
   }
 
   .menu__list,
@@ -1271,8 +1271,29 @@ html {
 
   .menu__link,
   .menu__btn {
-    font-size: 25px;
-    letter-spacing: 0.22em;
+    color: #6e774a;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    border-top: 2px solid #dae0c4;
+    margin: 0;
+  }
+
+  .menu__link {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu__link-hover {
+    display: none;
+  }
+
+  .menu__btn {
+    width: 100%;
   }
 
   .menu__button-item {
@@ -1288,37 +1309,29 @@ html {
   }
 
   .menu__text-logo {
-    font-size: 130px;
+    font-size: 70px;
     position: absolute;
     top: 0px;
-    text-shadow: 1px 1px 20px #0000008a;
-    height: 210px;
+    height: 100px;
     display: block;
     width: 100%;
-    /* background-color: #a9bc5e; */
     text-align: center;
-    padding-top: 7px;
-    border-bottom: 2px solid #c7cdd6;
+    padding-top: 11px;
+    border-bottom: 2px solid #6e774a;
+    color: #1c1c1b;
   }
 
-  .menu__text-logo::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: " ";
-    background-image: linear-gradient(to bottom,
-        rgb(76 96 31 / 70%) 0%,
-        rgb(0 0 0 / 0%) 90%);
+  .mobile-menu {
+    display: flex;
   }
 
   .mobile-menu__logo {
     padding-top: 20px;
   }
 
-  .mobile-menu {
-    display: flex;
+  .mobile-menu__button-burger.active {
+    top: 25px;
+    transition: all 0.4s ease;
   }
 
   .header__title {
@@ -1639,6 +1652,21 @@ html {
     max-width: 360px;
   }
 
+  .menu__text-logo {
+    font-size: 60px;
+    height: 90px;
+  }
+
+  .menu__item,
+  .menu__button-item {
+    height: 65px;
+  }
+
+  .menu__link,
+  .menu__btn {
+    font-size: 20px;
+  }
+
   .mobile-menu {
     height: 65px;
   }
@@ -1650,6 +1678,10 @@ html {
 
   .mobile-menu__button-burger {
     top: 9px;
+  }
+
+  .mobile-menu__button-burger.active {
+    top: 20px;
   }
 
   .header__title {
@@ -1763,6 +1795,21 @@ html {
     padding: 0 30px;
   }
 
+  .menu__text-logo {
+    font-size: 50px;
+    height: 80px;
+  }
+
+  .menu__item,
+  .menu__button-item {
+    height: 60px;
+  }
+
+  .menu__link,
+  .menu__btn {
+    font-size: 19px;
+  }
+
   .mobile-menu {
     height: 55px;
   }
@@ -1775,6 +1822,10 @@ html {
 
   .mobile-menu__button-burger {
     top: 5px;
+  }
+
+  .mobile-menu__button-burger.active {
+    top: 15px;
   }
 
   .header__title {
@@ -1868,6 +1919,32 @@ html {
 }
 
 @media (max-width: 390px) {
+  .menu__text-logo {
+    font-size: 40px;
+    height: 70px;
+  }
+
+  .menu__item,
+  .menu__button-item {
+    height: 55px;
+  }
+
+  .menu__link,
+  .menu__btn {
+    font-size: 18px;
+  }
+
+  .mobile-menu__button-burger {
+    width: 40px;
+    height: 40px;
+    top: 7px;
+    right: 15px;
+  }
+
+  .mobile-menu__button-burger.active {
+    top: 13px;
+  }
+
   .quality__holder {
     width: 310px;
     height: 90px;
@@ -1947,6 +2024,26 @@ html {
 @media (max-width: 360px) {
   .container {
     padding: 0 20px;
+  }
+
+  .menu__text-logo {
+    font-size: 30px;
+    height: 60px;
+    padding-top: 13px;
+  }
+
+  .menu__item,
+  .menu__button-item {
+    height: 50px;
+  }
+
+  .menu__link,
+  .menu__btn {
+    font-size: 17px;
+  }
+
+  .mobile-menu__button-burger.active {
+    top: 8px;
   }
 
   .mobile-menu__logo {
