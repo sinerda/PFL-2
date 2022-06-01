@@ -1,32 +1,39 @@
-document.getElementById("default").click();
+document.getElementById("default-tab").click();
 
+// Функция переключения табов. Привязывается через событие OnClick в HTML
 function openTab(evt, IdName) {
-  let i, tabcontent, tablinks;
+  const tabContent = document.getElementsByClassName("about__tab-content-inner");
+  const tabLinks = document.getElementsByClassName("about__tab-links");
+  const tabOnID = document.getElementById(IdName);
 
-  tabcontent = document.getElementsByClassName("about__tab-content-inner");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  // Скрытие всех вкладок
+  for (let i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
   }
 
-  tablinks = document.getElementsByClassName("about__tab-links");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("about__tab-links--active", "");
+  // "Обнуление" активного состояния всех кнопок
+  for (let i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace("about__tab-links--active", "");
   }
 
-  let x = window.matchMedia("(max-width: 585px)");
-  x.addEventListener('change', function (event) {
-    if (x.matches) {
-      document.getElementById(IdName).style.display = "block";
-    } else {
-      document.getElementById(IdName).style.display = "flex";
-    }
-  })
-
-  x.dispatchEvent(new Event('change'));
-
-
-  // document.getElementById(IdName).style.display = "flex";
+  // При помощи обращения к элементу по айди-шке нужный таб становится активным
+  tabOnID.style.display = "flex";
+  // Тут не до конца понятно КАК работает, но понятно что текущей кнопке присваивается "активный" класс
   evt.currentTarget.className += " about__tab-links--active";
+
+
+  const Media_585 = window.matchMedia("(max-width: 585px)");
+  
+  function FlexToBlock(e) {
+    if (e.matches) {
+      tabOnID.style.display = "block";
+    } else {
+      tabOnID.style.display = "flex";
+    }
+  }
+
+  Media_585.addListener(FlexToBlock);
+  FlexToBlock(Media_585);
 }
 
 
