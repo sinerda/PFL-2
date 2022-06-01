@@ -546,7 +546,7 @@ html {
 }
 
 .products-slider {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
 }
 
@@ -1037,6 +1037,18 @@ html {
   line-height: 40px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
+}
+
+@media (max-width: 1620px) {
+  .products-slider {
+    /* width: 99vw; */
+    /* background-color: tomato; */
+  }
+
+  .ps-item {
+    width: 505px;
+    margin: 0 40px 0 0;
+  }
 }
 
 @media (max-width: 1230px) {

@@ -45,8 +45,23 @@ $(function () {
     variableWidth: true,
     speed: 1800,
     // autoplay: true,
+    variableWidth: true,
     nextArrow: '<button class="slick-arrow products-arrow products-next"></button>',
     prevArrow: '<button class="slick-arrow products-arrow products-prev"></button>',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          rows: 1
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          rows: 2
+        }
+      }
+    ]
   });
   $('.reviews-slider').slick({
     speed: 4500,
