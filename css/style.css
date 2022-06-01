@@ -1051,6 +1051,25 @@ html {
   }
 }
 
+@media (max-width: 1500px) {
+  .about__content-text {
+    flex: 85%;
+  }
+
+  .about__content-images {
+    margin-left: 100px;
+  }
+
+  .content-images {
+    width: 90%;
+  }
+
+  .content-images__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media (max-width: 1230px) {
   .container {
     max-width: 960px;
@@ -1108,6 +1127,33 @@ html {
 
   .header__intro-border {
     font-size: 20px;
+  }
+
+  .about__inner {
+    width: 1030px;
+  }
+
+  .about__tab,
+  .content-text {
+    margin-left: 60px;
+  }
+
+  .about__tab-links {
+    font-size: 21px;
+    height: 50px;
+  }
+
+  .content-text__title {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .content-text__text {
+    line-height: 34px;
+  }
+
+  .content-images {
+    width: 85%;
   }
 
   .title {
@@ -1171,6 +1217,45 @@ html {
 
   .footer__form-btn {
     width: 80px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .about__inner {
+    width: 900px;
+  }
+
+  .about__tab,
+  .content-text {
+    margin-left: 60px;
+  }
+
+  .about__tab {
+    margin-bottom: 50px;
+    width: 810px;
+  }
+
+  .about__tab-links {
+    font-size: 19px;
+    height: 40px;
+  }
+
+  .content-text__title {
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  .about__content-text {
+    flex: 109%;
+  }
+
+  .content-text__text {
+    line-height: 29px;
+    font-size: 17px;
+  }
+
+  .content-images {
+    width: 95%;
   }
 }
 
@@ -1290,6 +1375,44 @@ html {
 @media (max-width: 930px) {
   .container {
     max-width: 730px;
+  }
+
+  .about__inner {
+    width: 780px;
+  }
+
+  .about__tab,
+  .content-text {
+    margin-left: 20px;
+  }
+
+  .about__tab {
+    width: 670px;
+  }
+
+  .about__tab-links {
+    font-size: 18px;
+    height: 35px;
+    margin-right: 75px;
+  }
+
+  .content-text__title {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 21px 0;
+  }
+
+  .about__content-text {
+    flex: 150%;
+  }
+
+  .content-text__text {
+    line-height: 25px;
+    font-size: 16.5px;
+  }
+
+  .about__content-images {
+    margin-left: 80px;
   }
 }
 
@@ -1460,6 +1583,35 @@ html {
     width: 430px;
   }
 
+  .about__inner {
+    width: 680px;
+  }
+
+  .about__tab {
+    width: 610px;
+    margin-bottom: 30px;
+  }
+
+  .about__tab-links {
+    font-size: 17px;
+    height: 32px;
+    margin-right: 65px;
+  }
+
+  .content-text__title {
+    font-size: 17px;
+    margin: 20px 0;
+  }
+
+  .content-text__text {
+    line-height: 23px;
+    font-size: 15.5px;
+  }
+
+  .about__content-images {
+    margin-left: 30px;
+  }
+
   .title {
     font-size: 22px;
   }
@@ -1561,6 +1713,23 @@ html {
 
   .quality__logos {
     width: 390px;
+  }
+
+  .about__inner {
+    width: 620px;
+  }
+
+  .about__tab {
+    width: 580px;
+  }
+
+  .about__tab-links {
+    margin-right: 55px;
+  }
+
+  .content-text__text {
+    line-height: 21px;
+    font-size: 14.5px;
   }
 
   .faq__inner {
@@ -1671,6 +1840,37 @@ html {
     margin-top: 20px;
   }
 
+  .about__inner {
+    width: 540px;
+  }
+
+  .about__tab {
+    width: 510px;
+  }
+
+  .about__tab-links {
+    margin-right: 45px;
+    font-size: 15px;
+  }
+
+  .about__content-text {
+    flex: 200%;
+  }
+
+  .content-text__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .content-text__text {
+    line-height: 19px;
+    font-size: 13.5px;
+  }
+
+  .about__content-images {
+    margin-left: 20px;
+  }
+
   .faq__inner {
     width: 500px;
   }
@@ -1759,6 +1959,28 @@ html {
   .quality__logos {
     width: 330px;
     margin-top: 17px;
+  }
+
+  .about__inner {
+    width: 460px;
+  }
+
+  .about__tab {
+    width: 440px;
+    margin-bottom: 20px;
+  }
+
+  .about__tab-content-inner {
+    display: block;
+  }
+
+  .about__tab-links {
+    margin-right: 35px;
+    letter-spacing: 0.12em;
+  }
+
+  .about__content-text {
+    margin-bottom: 40px;
   }
 
   .faq__inner {
@@ -1881,6 +2103,29 @@ html {
   .quality__logos {
     width: 300px;
     margin-top: 14px;
+  }
+
+  .about__inner {
+    width: 370px;
+  }
+
+  .about__tab {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .about__tab-links {
+    margin-right: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .content-text {
+    width: auto;
+    margin: 0 20px 40px;
+  }
+
+  .content-text__title {
+    font-size: 14px;
   }
 
   .faq__inner {
@@ -2158,6 +2403,19 @@ html {
   .quality__logos {
     width: 260px;
     margin-top: 11px;
+  }
+
+  .about__inner {
+    width: 290px;
+  }
+
+  .about__tab {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
+  .about__tab-links {
+    border-bottom: 2px solid #ced6af;
   }
 
   .faq__inner {
