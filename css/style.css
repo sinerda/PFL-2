@@ -241,8 +241,6 @@ html {
   height: calc(100% - 11%);
 }
 
-.intro-inner {}
-
 .header__title {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
@@ -410,8 +408,6 @@ html {
   left: 10px;
 }
 
-.quality {}
-
 .quality__inner {
   margin: 100px 0;
   display: flex;
@@ -439,8 +435,6 @@ html {
 .quality__logos {
   margin-top: 25px;
 }
-
-.about {}
 
 .about__inner {
   margin: auto;
@@ -554,8 +548,6 @@ html {
   /* display: flex; */
   justify-content: space-between;
 }
-
-.products-slider__item {}
 
 .ps-item {
   width: 615px;
@@ -695,8 +687,6 @@ html {
   right: 41px;
 }
 
-.faq {}
-
 .faq__inner {
   margin: 135px auto 145px;
   width: 570px;
@@ -706,10 +696,6 @@ html {
 .faq__title {
   margin-bottom: 45px;
 }
-
-.faq__accordion {}
-
-.accordion {}
 
 .accordion__btn {
   width: 570px;
@@ -787,8 +773,6 @@ html {
   margin: 15px 0 45px;
 }
 
-.reviews {}
-
 .reviews__slider-inner {
   height: 816px;
 }
@@ -821,8 +805,6 @@ html {
   border-right: none;
   background-image: url(../images/reviews-arr-left-.png);
 }
-
-.reviews-slider {}
 
 .reviews-slider__item {
   min-height: 800px;
@@ -913,10 +895,6 @@ html {
   text-transform: uppercase;
 }
 
-.footer {}
-
-.container {}
-
 .footer__inner {
   margin-bottom: 50px;
   text-align: center;
@@ -931,8 +909,6 @@ html {
   border-top: 2px solid #6e774a;
   min-width: 370px;
 }
-
-.footer__links-item {}
 
 .footer__links {
   font-family: 'Oswald', sans-serif;
@@ -949,8 +925,6 @@ html {
   text-decoration: underline;
 }
 
-.footer__subscribe {}
-
 .footer__text-logo {
   font-size: 60px;
   color: #6e774a;
@@ -965,8 +939,6 @@ html {
   position: relative;
   left: 5px;
 }
-
-.footer__social-links-item {}
 
 .footer__social-link {
   font-size: 22px;
@@ -1467,6 +1439,13 @@ html {
     text-transform: uppercase;
     border-top: 2px solid #dae0c4;
     margin: 0;
+  }
+
+  .menu__link:active,
+  .menu__btn:active,
+  .mobile-menu__button-burger:active {
+    background-color: #8a974f;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .menu__link {
@@ -2544,6 +2523,13 @@ html {
     text-transform: uppercase;
     border-top: 2px solid #dae0c4;
     margin: 0;
+  }
+
+  .menu__link:active,
+  .menu__btn:active,
+  .mobile-menu__button-burger:active {
+    background-color: #8a974f;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .menu__link {
