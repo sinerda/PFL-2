@@ -2176,89 +2176,143 @@ html {
 @media (max-width: 425px) {
   .container {
     max-width: 100%;
-    padding: 0 30px;
+    padding: 0 20px;
+  }
+
+  .menu__list,
+  .menu__button-list {
+    width: 70%;
   }
 
   .menu__item,
   .menu__button-item {
-    height: 60px;
+    height: 65px;
   }
 
   .menu__link,
   .menu__btn {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   .mobile-menu {
-    height: 55px;
+    height: 65px;
   }
 
   .mobile-menu__logo {
-    height: 55px;
-    padding-top: 15px;
-    font-size: 23px;
+    font-size: 37px;
+    padding-top: 11px;
+    height: 65px;
   }
 
   .mobile-menu__button-burger {
-    top: 5px;
+    top: 9px;
   }
 
   .header__title {
-    font-size: 24px;
-    line-height: 35px;
+    font-size: 29.5px;
+    line-height: 45px;
   }
 
   .header__title-choose,
   .header__intro-link {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .header__title-choose {
-    line-height: 50px;
+    line-height: 60px;
+  }
+
+  .header__intro-btn {
+    font-size: 18px;
+    width: 230px;
+    height: 55px;
   }
 
   .header__intro-link {
     display: inline-block;
     position: relative;
+    width: 230px;
   }
 
   .header__intro-border {
-    font-size: 14px;
+    font-size: 16px;
+    left: 30px;
+  }
+
+  .quality__inner {
+    margin: 90px 0;
   }
 
   .quality__holder {
-    width: 340px;
-    height: 100px;
+    width: 380px;
+    height: 110px;
   }
 
   .quality__title {
-    font-size: 15px;
-    margin-top: 19px;
+    font-size: 16px;
   }
 
   .quality__logos {
-    width: 280px;
+    width: 300px;
+    margin-top: 14px;
+  }
+
+  .about__inner {
+    width: 360px;
+  }
+
+  .about__tab {
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border-bottom: none;
+    padding-left: 12px;
+    border-left: 2px solid #6e774a;
+  }
+
+  .about__tab-links {
+    border-bottom: 2px solid #ced6af;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .about__tab-links--active {
+    border-bottom: 2px solid #1c1c1b;
+  }
+
+  .content-text__title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .content-text__text {
+    line-height: 25px;
+    font-size: 17.5px;
   }
 
   .faq__inner {
-    width: 335px;
+    width: 350px;
   }
 
   .title {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .accordion__btn {
-    width: 335px;
-    font-size: 14.5px;
-    padding-left: 24px;
-    letter-spacing: 0.16em;
+    width: 100%;
+    font-size: 18.5px;
+    padding-left: 30px;
+    letter-spacing: 0.15em;
+    height: 70px;
+    /* white-space: normal; */
+    line-height: 27px;
   }
 
   .accordion__btn::before,
   .accordion__btn::after {
     width: 15px;
     height: 15px;
+    top: 18px;
   }
 
   .accordion__btn::after {
@@ -2266,18 +2320,23 @@ html {
   }
 
   .accordion__text {
-    line-height: 22px;
-    font-size: 13.5px;
-    padding-left: 24px;
+    font-size: 17px;
+    line-height: 30px;
+    padding-left: 30px;
   }
 
   .single-review {
-    padding-top: 110px;
+    padding-top: 70px;
+  }
+
+  .single-review__comment,
+  .single-review__author {
+    font-size: 17.5px;
+    line-height: 28px;
   }
 
   .reviews__text-border {
-    bottom: 20px;
-    left: 15px;
+    display: none;
   }
 
   .footer__subscribe {
@@ -2297,137 +2356,124 @@ html {
     left: 23%;
   }
 
+  .footer__links {
+    font-size: 17.5px;
+  }
+
   .footer__text-logo {
     margin-bottom: 350px;
+    font-size: 45px;
+  }
+
+  .footer__social-link {
+    font-size: 26px;
+  }
+
+  .footer__sub-to-news {
+    font-size: 17px;
   }
 }
 
 @media (max-width: 390px) {
-
-  .menu__item,
-  .menu__button-item {
-    height: 55px;
+  .container {
+    padding: 0 15px;
   }
 
-  .menu__link,
-  .menu__btn {
-    font-size: 18px;
+  .menu__list,
+  .menu__button-list {
+    width: 80%;
   }
 
-  .mobile-menu__button-burger {
-    width: 40px;
-    height: 40px;
-    top: 7px;
-    right: 15px;
+  .header__title {
+    letter-spacing: 0.2em;
   }
 
   .quality__holder {
-    width: 310px;
-    height: 90px;
+    width: 340px;
+    height: 100px;
   }
 
   .quality__title {
-    font-size: 14px;
-    margin-top: 16px;
+    font-size: 16px;
+    margin-top: 18px;
   }
 
   .quality__logos {
-    width: 260px;
-    margin-top: 11px;
+    width: 300px;
+    margin-top: 14px;
   }
 
   .about__inner {
-    width: 290px;
+    width: 320px;
   }
 
   .about__tab {
-    width: 140px;
+    width: 240px;
     margin-bottom: 20px;
   }
 
-  .about__tab-links {
-    border-bottom: 2px solid #ced6af;
-  }
-
   .faq__inner {
-    width: 295px;
+    width: 300px;
   }
 
   .title {
-    font-size: 16px;
+    font-size: 21px;
+    line-height: 32px;
   }
 
-  .accordion__btn {
-    height: 45px;
-    width: 295px;
-    font-size: 13.5px;
-    letter-spacing: 0.12em;
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .accordion__btn::before,
-  .accordion__btn::after {
-    width: 14px;
-    height: 14px;
-    top: 5px;
-  }
-
-  .accordion__btn::after {
-    margin-left: -7px;
+  .accordion__text {
+    width: 310px;
   }
 
   .reviews-slider__item {
+    min-height: 470px;
     background-position-x: -90px;
     /* Это свойство почему-то не хочет работать из-за слайдера. 
     Он не учитывает этот стиль.
     сцуко :'(                */
   }
 
+  /* .slick-slide,
+  .slick-current,
+  .slick-active {
+    background-position: unset;
+    background-position-x: -90px;
+    background: url("images/back-reviews-1.jpg") -170px 0% / cover;
+  } */
+
   .single-review {
     max-width: 220px;
     padding-top: 70px;
   }
 
-  .footer__subscribe {
-    height: 660px;
-  }
-
   .footer__list-of-links {
     padding-top: 10px;
-  }
-
-  .footer__list-of-links:nth-of-type(1) {
-    top: 60px;
+    width: 67%;
+    left: 17%;
   }
 
   .footer__list-of-links:nth-of-type(2) {
-    bottom: 348px;
-  }
-
-  .footer__social-link {
-    font-size: 20px;
-  }
-
-  .footer__text-logo {
-    font-size: 34px;
-    margin-bottom: 290px;
+    bottom: 428px;
+    left: 17%;
   }
 
   .footer__list-of-social-links {
     margin: 30px 0;
   }
-
-  .footer__sub-to-news {
-    font-size: 15.5px;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 360px) {
   .container {
-    padding: 0 20px;
+    padding: 0 11px;
   }
 
-  .menu__item,
+  /* .menu__item,
   .menu__button-item {
     height: 50px;
   }
@@ -2439,13 +2485,14 @@ html {
 
   .mobile-menu__logo {
     font-size: 22px;
-  }
+  } */
 
   .header__title {
-    font-size: 22px;
+    font-size: 27.5px;
+    letter-spacing: 0.18em;
   }
 
-  .header__intro-btn {
+  /* .header__intro-btn {
     font-size: 14px;
     width: 180px;
     height: 45px;
@@ -2459,20 +2506,29 @@ html {
 
   .header__intro-link {
     width: 180px;
-  }
+  } */
 
   .quality__holder {
-    width: 280px;
-    height: 80px;
+    width: 300px;
+    height: 90px;
   }
 
   .quality__title {
-    font-size: 12px;
+    margin-top: 16px;
   }
 
   .quality__logos {
-    width: 230px;
+    width: 280px;
     margin-top: 9px;
+  }
+
+  .about__inner,
+  .faq__inner {
+    width: 280px;
+  }
+
+  .accordion__text {
+    width: 270px;
   }
 
   .footer__form {
