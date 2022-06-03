@@ -88,13 +88,13 @@ $(function () {
   });
   $('.reviews-slider').slick({
     speed: 4500,
-    // autoplay: true,
+    autoplay: true,
     // infinite: false,
     nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',
     prevArrow: '<button class="slick-arrow reviews-arrow reviews-prev"></button>',
     responsive: [
       {
-        breakpoint: 426,
+        breakpoint: 501,
         settings: {
           arrows: false
         }
