@@ -23,7 +23,7 @@ function openTab(evt, IdName) {
 
 
   const Media_585 = window.matchMedia("(max-width: 585px)");
-  
+
   function FlexToBlock(e) {
     if (e.matches) {
       tabOnID.style.display = "block";
@@ -65,30 +65,40 @@ for (let elem of Mbtn) {
 
 $(function () {
   $('.products-slider').slick({
-    variableWidth: true,
     speed: 1800,
-    // autoplay: true,
-    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 4500,
+    infinite: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     nextArrow: '<button class="slick-arrow products-arrow products-next"></button>',
     prevArrow: '<button class="slick-arrow products-arrow products-prev"></button>',
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1231,
         settings: {
-          rows: 1
+          slidesToShow: 2
         }
       },
       {
-        breakpoint: 800,
+        breakpoint: 651,
         settings: {
-          rows: 2
+          slidesToShow: 1,
+          slidesPerRow: 1,
+          rows: 2,
+          // variableWidth: true
         }
       }
     ]
   });
+})
+
+$(function () {
   $('.reviews-slider').slick({
     speed: 4500,
-    autoplay: true,
+    // autoplay: true,
     // infinite: false,
     nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',
     prevArrow: '<button class="slick-arrow reviews-arrow reviews-prev"></button>',
