@@ -65,14 +65,12 @@ for (let elem of Mbtn) {
 
 $(function () {
   $('.products-slider').slick({
-    speed: 1800,
-    autoplay: true,
+    speed: 5800,
+    // autoplay: true,
     autoplaySpeed: 4500,
     infinite: true,
-    pauseOnFocus: false,
-    pauseOnHover: false,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     nextArrow: '<button class="slick-arrow products-arrow products-next"></button>',
     prevArrow: '<button class="slick-arrow products-arrow products-prev"></button>',
     responsive: [
@@ -85,10 +83,10 @@ $(function () {
       {
         breakpoint: 651,
         settings: {
+          slidesToScroll: 1,
           slidesToShow: 1,
           slidesPerRow: 1,
-          rows: 2,
-          // variableWidth: true
+          rows: 2
         }
       }
     ]
@@ -97,9 +95,12 @@ $(function () {
 
 $(function () {
   $('.reviews-slider').slick({
-    speed: 4500,
+    speed: 5800,
     // autoplay: true,
+    autoplaySpeed: 4500,
     // infinite: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
     nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',
     prevArrow: '<button class="slick-arrow reviews-arrow reviews-prev"></button>',
     responsive: [
