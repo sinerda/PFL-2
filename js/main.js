@@ -65,7 +65,7 @@ for (let elem of Mbtn) {
 
 $(function () {
   $('.products-slider').slick({
-    speed: 5800,
+    speed: 2800,
     // autoplay: true,
     autoplaySpeed: 4500,
     infinite: true,
@@ -95,10 +95,9 @@ $(function () {
 
 $(function () {
   $('.reviews-slider').slick({
-    speed: 5800,
+    speed: 2800,
     // autoplay: true,
     autoplaySpeed: 4500,
-    // infinite: false,
     pauseOnFocus: false,
     pauseOnHover: false,
     nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',

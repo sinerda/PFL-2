@@ -220,7 +220,7 @@ html {
 
 /* menu open */
 .button-burger.active .button-burger__lines:nth-of-type(1) {
-  opacity: 0%;
+  background-color: rgba(0, 0, 0, 0);
   transition: all .1s ease-in;
 }
 
@@ -274,29 +274,26 @@ html {
   margin-top: 40px;
   padding-right: 60px;
   position: relative;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 
-.header__intro-btn:hover {
-  /* box-shadow: 1px 1px 20px 6px #0000008a; */
-  /* animation: intro-btn 1.7s infinite; */
-  /* border-bottom: 2px solid #b4b4b4; */
+@media (hover: hover) {
+  .header__intro-btn:hover {
+    background-color: rgba(255, 255, 255, 0.188);
+    transition: all 0.4s;
+  }
 }
 
-/* @keyframes intro-btn {
-  0% {
-    transform: translate(0, 0);
-    /* opacity: 0; */
-/* }
-
-  50% {
-    opacity: 1;
+@media (hover: none) {
+  .header__intro-btn:active {
+    background-color: #ffffff30;
+    transition: all 0.4s;
   }
-
-  100% {
-    transform: translate(0, 2px);
-    /* opacity: 0;
-  }
-} **/
+}
 
 .header__intro-btn::after {
   content: "";
@@ -326,8 +323,16 @@ html {
   padding-top: 10px;
 }
 
-.header__intro-link:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .header__intro-link:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (hover: none) {
+  .header__intro-link:active {
+    text-decoration: underline;
+  }
 }
 
 .header__intro-link::after {
@@ -571,13 +576,18 @@ html {
   transition: 0.7s ease;
 }
 
-.products-arrow:hover {
-  background-color: #ced6af;
-  transition: all 0.4s;
+@media (hover: hover) {
+  .products-arrow:hover {
+    background-color: #ced6af;
+    transition: all 0.4s;
+  }
 }
 
-.products-arrow:active {
-  background-color: #e1e1e1;
+@media (hover: none) {
+  .products-arrow:active {
+    background-color: #ced6af;
+    transition: all 0.4s;
+  }
 }
 
 .products-prev {
@@ -670,13 +680,18 @@ html {
   transition: 0.7s ease;
 }
 
-.ps-item__buy:hover {
-  background-color: #8a974f;
-  transition: all 0.4s;
+@media (hover: hover) {
+  .ps-item__buy:hover {
+    background-color: #8a974f;
+    transition: all 0.4s;
+  }
 }
 
-.ps-item__buy:active {
-  background-color: #a9bc5e;
+@media (hover: none) {
+  .ps-item__buy:active {
+    background-color: #a9bc5e;
+    transition: all 0.4s;
+  }
 }
 
 .ps-item__buy::after {
@@ -720,9 +735,8 @@ html {
   transition: 0.7s ease;
 }
 
-.accordion__btn:hover,
-.accordion__btn:active {
-  background-color: #dae0c458 !important;
+.accordion__btn:hover {
+  background-color: #dae0c458;
   transition: all 0.4s;
 }
 
@@ -789,9 +803,18 @@ html {
   transition: 0.7s ease;
 }
 
-.reviews-arrow:hover {
-  background-color: #aab384;
-  transition: all 0.4s;
+@media (hover: hover) {
+  .reviews-arrow:hover {
+    background-color: #aab384;
+    transition: all 0.4s;
+  }
+}
+
+@media (hover: none) {
+  .reviews-arrow:active {
+    background-color: #aab384;
+    transition: all 0.4s;
+  }
 }
 
 .reviews-arrow:active {
@@ -926,8 +949,16 @@ html {
   text-decoration: none;
 }
 
-.footer__links:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .footer__links:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (hover: none) {
+  .footer__links:active {
+    text-decoration: underline;
+  }
 }
 
 .footer__text-logo {
@@ -950,8 +981,16 @@ html {
   color: #6e774a;
 }
 
-.footer__icon-social-link:hover {
-  color: #a9bc5e;
+@media (hover: hover) {
+  .footer__icon-social-link:hover {
+    color: #a9bc5e;
+  }
+}
+
+@media (hover: none) {
+  .footer__icon-social-link:active {
+    color: #a9bc5e;
+  }
 }
 
 .footer__verticale-line {
@@ -1378,7 +1417,7 @@ html {
 
   .reviews-slider__review {
     bottom: -12px;
-}
+  }
 
   .single-review {
     padding-top: 180px;
@@ -1741,7 +1780,7 @@ html {
 
   .reviews-slider__review {
     bottom: -11px;
-}
+  }
 
   .single-review {
     padding-top: 160px;
@@ -1909,7 +1948,7 @@ html {
 
   .reviews-slider__review {
     bottom: -10px;
-}
+  }
 
   .single-review {
     max-width: 580px;
@@ -2065,7 +2104,7 @@ html {
 
   .reviews-slider__review {
     bottom: -11px;
-}
+  }
 
   .single-review {
     max-width: 530px;
@@ -2362,11 +2401,12 @@ html {
 
   .reviews-slider__item {
     min-height: 470px;
+    background-position-x: -110px;
   }
 
   .reviews-slider__review {
     bottom: -10px;
-}
+  }
 
   .reviews-arrow {
     display: none;
@@ -2616,19 +2656,8 @@ html {
 
   .reviews-slider__item {
     min-height: 470px;
-    background-position-x: -90px;
-    /* Это свойство почему-то не хочет работать из-за слайдера. 
-    Он не учитывает этот стиль.
-    сцуко :'(                */
+    background-position-x: -130px;
   }
-
-  /* .slick-slide,
-  .slick-current,
-  .slick-active {
-    background-position: unset;
-    background-position-x: -90px;
-    background: url("images/back-reviews-1.jpg") -170px 0% / cover;
-  } */
 
   .single-review {
     max-width: 220px;
@@ -2689,6 +2718,10 @@ html {
 
   .ps-item__price {
     margin: 19px 0 19px 12px;
+  }
+
+  .reviews-slider__item {
+    background-position-x: -190px;
   }
 
   .footer__form {
@@ -2868,6 +2901,10 @@ html {
     top: -90px;
   }
 
+  .products__slider-inner {
+    height: 420px;
+  }
+
   .ps-item {
     height: 355px;
   }
@@ -2898,6 +2935,10 @@ html {
 }
 
 @media (max-height: 400px) and (orientation: landscape) {
+  .products__slider-inner {
+    height: 315px;
+  }
+
   .ps-item {
     height: 270px;
   }
