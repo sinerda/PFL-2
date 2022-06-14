@@ -1,12 +1,14 @@
+const _585px = window.matchMedia("(max-width: 585px)");
 document.getElementById("default-tab").click();
 
-// Функция переключения табов. Привязывается через событие OnClick в HTML
+// Функция переключения табов. СРАБАТЫВАЕТ ТОЛЬКО ПОСЛЕ КЛИКА на табах. 
+// Привязывается через событие OnClick в HTML
 function openTab(evt, IdName) {
   const tabContent = document.getElementsByClassName("about__tab-content-inner");
   const tabLinks = document.getElementsByClassName("about__tab-links");
   const tabOnID = document.getElementById(IdName);
 
-  // Скрытие всех вкладок
+  // Изначальное скрытие всех вкладок
   for (let i = 0; i < tabContent.length; i++) {
     tabContent[i].style.display = "none";
   }
@@ -17,26 +19,30 @@ function openTab(evt, IdName) {
   }
 
   // При помощи обращения к элементу по айди-шке нужный таб становится активным
-  tabOnID.style.display = "flex";
-  // Тут не до конца понятно КАК работает, но понятно что текущей кнопке присваивается "активный" класс
-  evt.currentTarget.className += " about__tab-links--active";
-
-
-  const Media_585 = window.matchMedia("(max-width: 585px)");
-
-  function FlexToBlock(e) {
-    if (e.matches) {
-      tabOnID.style.display = "block";
-    } else {
-      tabOnID.style.display = "flex";
-    }
+  // В зависимости от ширины вьюпорта меняется свойство "дисплей" для табов
+  if (_585px.matches) {
+    tabOnID.style.display = "block";
+  } else {
+    tabOnID.style.display = "flex";
   }
 
-  Media_585.addListener(FlexToBlock);
-  FlexToBlock(Media_585);
+  // Тут не до конца понятно КАК работает, но понятно что текущей кнопке присваивается "активный" класс
+  evt.currentTarget.className += " about__tab-links--active";
 }
 
+// Отслеживание изменения размера вьюпорта
+// Изменение свойства "дисплей" в зависимости от ширины
+window.onresize = function () {
+  const tabID = document.getElementsByClassName('about__tab-links--active');
+  const index = tabID[0].dataset.index;
+  const tabContent = document.getElementsByClassName("about__tab-content-inner");
 
+  if (_585px.matches) {
+    tabContent[index - 1].style.display = "block";
+  } else {
+    tabContent[index - 1].style.display = "flex";
+  }
+}
 
 
 
@@ -61,6 +67,7 @@ for (let elem of Mbtn) {
     ButtonMenu.classList.toggle('active');
   })
 }
+
 
 
 $(function () {
@@ -113,16 +120,16 @@ $(function () {
   });
 })
 
-
 $(function () {
   $(".slick-next").html("");
   $(".slick-prev").html("");
 })
 
 
-let acc = document.getElementsByClassName("accordion__btn");
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
+
+let acrdn = document.getElementsByClassName("accordion__btn");
+for (let i = 0; i < acrdn.length; i++) {
+  acrdn[i].addEventListener("click", function () {
     this.classList.toggle("accordion__btn--active");
 
     let panel = this.nextElementSibling;
