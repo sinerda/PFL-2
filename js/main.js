@@ -105,8 +105,6 @@ $(function () {
     speed: 2800,
     autoplay: true,
     autoplaySpeed: 4500,
-    pauseOnFocus: false,
-    pauseOnHover: false,
     nextArrow: '<button class="slick-arrow reviews-arrow reviews-next"></button>',
     prevArrow: '<button class="slick-arrow reviews-arrow reviews-prev"></button>',
     responsive: [
