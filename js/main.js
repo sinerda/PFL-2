@@ -73,7 +73,7 @@ for (let elem of Mbtn) {
 $(function () {
   $('.products-slider').slick({
     speed: 2800,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4500,
     infinite: true,
     slidesToShow: 3,
@@ -103,7 +103,7 @@ $(function () {
 $(function () {
   $('.reviews-slider').slick({
     speed: 2800,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4500,
     pauseOnFocus: false,
     pauseOnHover: false,
