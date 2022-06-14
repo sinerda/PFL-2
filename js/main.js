@@ -26,8 +26,8 @@ function openTab(evt, IdName) {
     tabOnID.style.display = "flex";
   }
 
-  // Тут не до конца понятно КАК работает, но понятно что текущей кнопке присваивается "активный" класс
-  evt.currentTarget.className += " about__tab-links--active";
+  // Текущей кнопке присваивается "активный" класс
+  evt.currentTarget.classList.add("about__tab-links--active");
 }
 
 // Отслеживание изменения размера вьюпорта
